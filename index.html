@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IWS — Coming Soon</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #070F1C;
+      color: #F4F7FA;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .bg-lines {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .bg-lines::before, .bg-lines::after {
+      content: '';
+      position: absolute;
+      left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #E8720C, transparent);
+      opacity: 0;
+      animation: scan 7s ease-in-out infinite;
+    }
+
+    .bg-lines::after { animation-delay: 3.5s; }
+
+    @keyframes scan {
+      0%   { top: 10%; opacity: 0; }
+      10%  { opacity: 0.3; }
+      90%  { opacity: 0.1; }
+      100% { top: 90%; opacity: 0; }
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      max-width: 540px;
+    }
+
+    .logo {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 3rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      margin-bottom: 2.5rem;
+    }
+
+    .logo span { color: #E8720C; }
+
+    .divider {
+      width: 40px;
+      height: 2px;
+      background: #E8720C;
+      margin: 0 auto 2rem;
+    }
+
+    h1 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: clamp(2.8rem, 8vw, 5rem);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      line-height: 1;
+      margin-bottom: 1.2rem;
+    }
+
+    h1 em {
+      font-style: normal;
+      color: #C9D8E8;
+      font-weight: 300;
+    }
+
+    p {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #6B8CA8;
+      margin-bottom: 2.5rem;
+    }
+
+    .email-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #C9D8E8;
+      text-decoration: none;
+      font-size: 0.88rem;
+      letter-spacing: 0.06em;
+      border-bottom: 1px solid rgba(201,216,232,0.2);
+      padding-bottom: 0.2rem;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .email-link:hover {
+      color: #E8720C;
+      border-color: #E8720C;
+    }
+
+    .footer-note {
+      position: fixed;
+      bottom: 1.5rem;
+      font-size: 0.72rem;
+      color: #1B3A5C;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .bg-lines::before, .bg-lines::after { animation: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bg-lines"></div>
+
+  <div class="content">
+    <div class="logo">IW<span>S</span></div>
+    <div class="divider"></div>
+    <h1>Coming <em>Soon</em></h1>
+    <p>Our new website is on its way.<br/>In the meantime, reach out to us directly.</p>
+    <a href="mailto:info@iwsme.com" class="email-link">✉ info@iwsme.com</a>
+  </div>
+
+  <p class="footer-note">© 2026 Industrial & Marine Solutions</p>
+
+</body>
+</html>
