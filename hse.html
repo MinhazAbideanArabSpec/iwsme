@@ -291,11 +291,12 @@ header:not(.solid) .burger span{background:#fff}
 .tr-projects{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 @media(max-width:900px){.tr-projects{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:600px){.tr-projects{grid-template-columns:1fr}}
-.tr-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-left:3px solid var(--red);border-radius:12px;padding:28px 26px;transition:background .2s,transform .2s}
-.tr-card:hover{background:rgba(255,255,255,.07);transform:translateY(-3px)}
+.tr-card{background:#fff;border:1px solid var(--line);border-left:3px solid var(--red);border-radius:12px;padding:28px 26px;transition:background .2s,transform .2s,box-shadow .2s}
+.tr-card:hover{background:#fff;transform:translateY(-3px);box-shadow:0 10px 24px rgba(19,23,28,.08)}
 .tr-tag{font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#ff8e93}
-.tr-card h3{font-size:1.28rem;font-weight:700;margin-top:11px;letter-spacing:-.01em;color:#fff}
-.tr-card p{margin-top:10px;color:rgba(255,255,255,.72);font-size:.97rem;line-height:1.58}
+.tr-card h3{font-size:1.28rem;font-weight:700;margin-top:11px;letter-spacing:-.01em;color:var(--ink)}
+.tr-card p{margin-top:10px;color:var(--slate);font-size:.97rem;line-height:1.58}
+.tr-card b{color:var(--ink);font-weight:700}
 .tr-foot{text-align:center;color:rgba(255,255,255,.5);font-size:.86rem;margin-top:30px;max-width:64ch;margin-left:auto;margin-right:auto}
 .sec-dark .ph{background:rgba(242,193,78,.18);box-shadow:inset 0 -2px 0 rgba(242,193,78,.55);color:rgba(255,255,255,.9)}
 
@@ -558,9 +559,6 @@ html[dir="rtl"] .ataglance dt{direction:rtl}
 <!-- Cloudflare Web Analytics -->
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "7d0cb467ffb24f098dd9cd3364c8a485"}'></script>
 <!-- End Cloudflare Web Analytics -->
-<!-- Vercel Web Analytics -->
-<script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
-<!-- End Vercel Web Analytics -->
 </head>
 <body>
 <header id="hdr">
